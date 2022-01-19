@@ -6,7 +6,7 @@ import time
 
 
 #The Choice Maker
-print("||||||||The Ultimate Bot|||||||")
+print("||||||||The WUMPUS||||||||")
 print("1 : Wikipedia Something")
 time.sleep(0.5)
 print("2 : Calculator")
@@ -119,6 +119,11 @@ if choice == 6:
 
 else:
     print("Enter a valid option")
+    
+    
+# BY ARNAV PATHAK
+# BY ARNAV PATHAK
+# BY ARNAV PATHAK
     
     
 
