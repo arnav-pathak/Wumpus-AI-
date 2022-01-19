@@ -8,3 +8,5 @@
 
 #                                                                     Wumpus
 Wumpus. An AI. Helps you with most of the tasks that you need. It has a calculator. A wikipedia engine. Its version 2 will be released soon. Hope you like it
+
+Requirement : Python IDLE interpreter. 
