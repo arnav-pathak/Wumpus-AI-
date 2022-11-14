@@ -2,6 +2,11 @@ import pyttsx3
 import datetime
 import speech_recognition as sr
 import pyaudio
+import wikipedia
+import webbrowser
+import os
+
+
 
 def speak(audio):
        pass      
@@ -52,7 +57,50 @@ def command():
 
 
 
+
+
 if __name__=="__main__" :
     welcomeme()
-    command()
+    while  True:
+        query = command().lower()
+
+        if 'wikipedia' in query:
+            speak("Searching..")
+            query = query.replace("wikiepdia", "")
+            results = wikipedia.summary(query, sentences=2)
+            speak("As per Wikipedia")
+            speak(results)
+
+        elif 'search youtube' in query:
+            webbrowser.open("youtube.com")
+
+        elif 'search creator' in query:
+            webbrowser.open("https://github.com/Varietyop/Varietyop")
+        
+        elif 'search outlook' in query:
+            webbrowser.open("https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1668442957&rver=7.0.6737.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fnlp%3d1%26RpsCsrfState%3d125a4b57-538d-bf9c-e7b8-531a68c90846&id=292841&aadredir=1&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=90015")
+        
+        elif 'tell time' in query:
+            strTime = datetime.datetime.now().strftime("%H:%M:%S")
+            speak(f"The time is{strTime}")
+
+        elif 'tell about updates' in query:
+            speak("We are currently developing Matrix 2.0 with a GUI interface.")
+
+        elif 'open code' in query:
+            codePath = "C:\Users\sacpa\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+            os.startfile(codePath)
+        
+        elif 'open chrome' in query:
+            chromePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+            os.startfile(chromePath)
+
+        elif 'open Blender' in query:
+            blendPath = "C:\Program Files\Blender Foundation\Blender 3.3\blender-launcher.exe"
+            os.startfile(blendPath)
+
+ 
+
+            
+
 
